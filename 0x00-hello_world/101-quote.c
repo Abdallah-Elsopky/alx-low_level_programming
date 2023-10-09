@@ -1,15 +1,15 @@
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- *main - Entry Point
+ * main- Entry point
  *
- *Description: print a qoute using write function witout printf or puts
+ * Description: A program that prints to standard error
  *
- *Return: 1 (not success)
+ * Return: Always 1 (success)
  */
 int main(void)
 {
-	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(1, quo, 59);
+	fprintf(stderr,
+			"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }
