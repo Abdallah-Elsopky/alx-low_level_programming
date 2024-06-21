@@ -1,9 +1,9 @@
+#include <stdio.h>
+
 /**
  * main - Entry point
  *
- * Description: c program using printf and add new line
- *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 #include <stdio.h>
 
