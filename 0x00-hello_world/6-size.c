@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-imt main(void)
+int main(void)
 {
 	printf("Size of a char: %lu\n", sizeof(char));
 	printf("Size of an int: %lu\n", sizeof(int));
