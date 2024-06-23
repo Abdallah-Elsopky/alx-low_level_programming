@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: Declare the j  of random number (n)
+ * Description: Declare the last  of random number (n)
  *
  * Return: Always 0 (Success)
  */
@@ -15,22 +15,22 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int j;
+	int last;
 
-	if (j > 5)
+	if (last > 5)
 	{
-		j = n % 10;
-		printf("j of %d is %d and is greater than 5\n", n, j);
+		last = n % 10;
+		printf("last of %d is %d and is greater than 5\n", n, last);
 	}
-	else if (j > 6 && j != 0)
+	else if (last > 6 && last != 0)
 	{
-		j = n % 10;
-		printf("j of %d is %d and is less than 6 and not 0\n", n, j);
+		last = n % 10;
+		printf("last of %d is %d and is less than 6 and not 0\n", n, last);
 	}
 	else
 	{
-		j = n % 10;
-		printf("j of %d is %d and is 0\n", n, j);
+		last = n % 10;
+		printf("last of %d is %d and is 0\n", n, last);
 	}
 	return (0);
 }
