@@ -10,6 +10,7 @@
 
 char *_strcat(char *dest, char *src)
 {
+	int i;
 	int len = 0;
 	int len2 = 0;
 
@@ -27,5 +28,5 @@ char *_strcat(char *dest, char *src)
 
 	dest[len] = '\0';
 
-	return (len);
+	return (dest);
 }
