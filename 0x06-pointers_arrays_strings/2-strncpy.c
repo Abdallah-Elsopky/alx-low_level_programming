@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _strncpy - Copies up to n characters from src to dest.
- * @dest: Destination buffer
- * @src: Source string
+ * _strncpy - Copies up to 'n' characters from 'src' to 'dest'
+ * @dest: Pointer to destination buffer
+ * @src: Pointer to source string
  * @n: Maximum number of characters to copy
- * Return: Pointer to dest
+ *
+ * Return: Pointer to the destination string 'dest'
  */
-
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
@@ -16,9 +16,10 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 	}
-	for (; i < n; i++)
+
+	for ( ; i < n; i++)
 	{
-		dest[i] != '\0';
+		dest[i] = '\0';
 	}
 
 	return (dest);
