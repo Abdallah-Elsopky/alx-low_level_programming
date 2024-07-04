@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _strncat - cpy string 2 to 1 with [n]Bytes
+ * _strncat - copy string 2 to string 1 with [n] Bytes
  * @dest: first string and the pointer
  * @src: second string that will be added
- * @n: nums of Bytes that will be added
+ * @n: number of Bytes that will be added
  * Return: dest
  */
 
@@ -21,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest[len + i] = src[i];
 	}
-		dest[len = '\0'];
+	dest[len] = '\0';
 
 	return (dest);
 }
