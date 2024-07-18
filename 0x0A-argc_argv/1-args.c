@@ -4,7 +4,7 @@
  * 
  */
 
-int main(int argc, char argv[])
+int main(int argc __attribute__((unused)), char argv[])
 {
 	printf("%d\n", argc - 1);
 
