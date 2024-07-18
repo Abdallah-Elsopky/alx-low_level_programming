@@ -6,17 +6,16 @@
  * @argc: number of command line arguments
  * @argv: array containing the program command line arguments
  *
- * Return: (0) successful otherwich 1 failed.
+ * Return: (0) successful.
  */
 
 int main(int argc, char *argv[])
-	{
-
-	 int total;
+{
+	int total;
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		fprintf(stderr, "Error\n");
 		return (1);
 	}
 
@@ -27,6 +26,5 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", total);
 
-return (0);
-
-	}
+	return (0);
+}
