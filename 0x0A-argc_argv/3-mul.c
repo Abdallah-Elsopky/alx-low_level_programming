@@ -9,10 +9,9 @@
  */
 
 int main(int argc, char **argv)
-{
+	{
 
-	int total;
-
+	 int total;
 
 	if (argc < 2)
 	{
@@ -25,4 +24,5 @@ int main(int argc, char **argv)
 	printf("%d\n", total);
 
 	return (0);
-}
+
+	}
