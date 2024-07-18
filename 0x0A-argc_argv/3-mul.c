@@ -8,13 +8,13 @@
  * Return: (0) successful otherwich 1 failed.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv[])
 {
 
 	int total;
 
 
-	if (argc < 2)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
