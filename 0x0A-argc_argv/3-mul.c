@@ -6,21 +6,24 @@
  * @argc: number of command line arguments
  * @argv: array containing the program command line arguments
  *
- * Return: (0) successful.
+ * Return: (0) successful or 1 if fail.
  */
 
 int main(int argc, char *argv[])
 {
-	int mult, n1, n2;
+	int total, num1, num2;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
-	return (1);
+		return (1);
 	}
-	n1 = atoi(argv[1]);
-	n2 = atoi(argv[2]);
-	mult = n1 * n2;
-	printf("%d\n", mult);
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+
+	total = num1 * num2;
+	printf("%d\n", total);
+
 return (0);
 }
