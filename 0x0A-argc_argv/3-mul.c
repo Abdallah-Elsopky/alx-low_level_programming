@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - Entary Point
@@ -11,13 +10,17 @@
 
 int main(int argc, char *argv[])
 {
+
+	int total;
+
+
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	int total = (int) *argv[1] * (int) *argv[2];
+	total = (int) *argv[1] * (int) *argv[2];
 
 	printf("%d\n", total);
 
