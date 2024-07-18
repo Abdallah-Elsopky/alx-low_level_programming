@@ -11,20 +11,16 @@
 
 int main(int argc, char *argv[])
 {
-	int total;
+	int mult, n1, n2;
 
 	if (argc != 3)
 	{
-		fprintf(stderr, "Error\n");
-		return (1);
+		printf("Error\n");
+	return (1);
 	}
-
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
-
-	total = num1 * num2;
-
-	printf("%d\n", total);
-
-	return (0);
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[2]);
+	mult = n1 * n2;
+	printf("%d\n", mult);
+return (0);
 }
