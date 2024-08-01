@@ -10,52 +10,24 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	int count = 0;
-	list_t *temp;
+	list_t *new;
+	unsigned int len = 0;
 
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
-		return (NULL);
-	temp->str = _strdup(str);
-	while (str[count] != '\0')
-		count++;
-	temp->len = count;
-	temp->next = *head;
-	*head = temp;
-	return (temp);
-}
-
-/**
- * *_strdup - one argument
- * @str: string
- *
- * Description: returns a pointer
- * Return: pointer
- */
-char *_strdup(const char *str)
-{
-	int i, j;
-	char *ptr;
-
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	while (*(str + i) != '\0')
+	new = malloc(sizeof(list_t));
+	if (new)
 	{
-		i++;
-	}
-
-	ptr = malloc(sizeof(char) * i + 1);
-
-	if (ptr == NULL)
+		new->str = strdup(str);
+		if (new->str)
+		{
+			while (new->str[len])
+				len++;
+			new->len = len;
+			new->next = *head;
+			*head = new;
+			return (new);
+		}
+		free(new);
 		return (NULL);
-
-	j = 0;
-	while (str[j] != '\0')
-	{
-		ptr[j] = str[j];
-		j++;
 	}
-	ptr[j] = '\0';
-	return (ptr);
+	return (NULL);
 }
