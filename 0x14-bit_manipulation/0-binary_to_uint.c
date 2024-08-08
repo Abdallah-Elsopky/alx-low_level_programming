@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * binary_to_uint - convert binary num to unit
@@ -12,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
 
-	if (b == NULL)
+	if (b == '\0')
 		return (0);
 	while (*b != '\0')
 	{
