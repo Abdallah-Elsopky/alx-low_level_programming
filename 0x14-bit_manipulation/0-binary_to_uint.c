@@ -9,18 +9,18 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal;
-	unsigned int i;
+	unsigned int result = 0;
 
-	for (decimal = 0, i = 0; b[i] != '\0'; i++)
+	if (b == '\0')
+		return (0);
+	while (*b != '\0')
 	{
-		if (b[i] == '1')
-			decimal = (decimal << 1) | 1;
-		else if (b[i] == '0')
-			decimal <<= 1;
-		else if (b[i] != '0' && b[i] != '1')
+		result = result << 1;
+		if (*b != '1' && *b != '0')
 			return (0);
+		else if (*b == '1')
+			result = result | 1;
+		b++;
 	}
-
-	return (decimal);
+	return (result);
 }
