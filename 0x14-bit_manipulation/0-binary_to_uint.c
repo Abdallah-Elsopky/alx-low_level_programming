@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * binary_to_uint - convert binary num to unit
@@ -10,18 +9,24 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result = 0;
+	unsigned int num, i;
 
-	if (b == '\0')
+	if (!b || !*b)
 		return (0);
-	while (*b != '\0')
+
+	num = i = 0;
+	while (b[i])
 	{
-		result = result << 1;
-		if (*b != '1' && *b != '0')
+		if (b[i] > 49)
 			return (0);
-		else if (*b == '1')
-			result = result | 1;
-		b++;
+		else if (b[i] == 49)
+		{
+			num <<= 1;
+			num += 1;
+		}
+		else
+			num <<= 1;
+		i++;
 	}
-	return (result);
+	return (num);
 }
